@@ -1,0 +1,105 @@
+$fontHeader: 'Shadows Into Light Two', cursive;
+$fontContent: 'Jura', sans-serif;
+$primary-color: #09060E;
+$second-color: #F2F2F2;
+$third-color: #CCCCCA;
+$fourth-color: #d8a6a2;
+$fifth-color: #e0ba50a6;
+
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    background: linear-gradient(135deg, $fourth-color 21px, $second-color 22px, $second-color 22px, transparent 24px, transparent 67px, $second-color 67px, $second-color 69px, transparent 69px),
+    linear-gradient(225deg, $fourth-color 21px, $second-color 22px, $second-color 22px, transparent 24px, transparent 67px, $second-color 67px, $second-color 69px, transparent 69px)0 64px;
+    background-color:$fourth-color;
+    background-size: 64px 128px;
+    
+    main {
+        display: grid;
+        grid-template-columns: 2.3fr 1.7fr;
+        grid-template-rows: 0.7fr 0.7fr 1.7fr 0.9fr 1.7fr 0.7fr 0.7fr;
+        gap: 0px 30px;
+        grid-template-areas:
+        ". ."
+        ". checklist"
+        "contentExam checklist"
+        ". checklist"
+        "contentSum checklist"
+        ". checklist"
+        ". .";
+    
+    }
+    #contentExam { 
+        grid-area: contentExam; 
+        max-width: 600px;
+        min-width: 450px;
+        margin: auto;
+    }
+    #contentSum { 
+        grid-area: contentSum; 
+        max-width: 600px;
+        min-width: 450px;
+        margin: auto;
+    }
+    #checklistBox { 
+        grid-area: checklist; 
+        max-width: 500px;
+        min-width: 350px;
+        margin-right: 20px;
+    }
+    
+    section {
+    background-color: $fifth-color;
+    border-radius: 10px;
+        
+        h1, h2, h3 {
+            
+            padding: 10px;
+            margin: 0px;
+            text-align: center;
+            font-size: 2.4em;
+            color: $primary-color;
+            font-family: $fontHeader;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin: 0px;
+            font-family: $fontContent;
+            font-size: 2.7em;
+            padding: 20px;
+            text-align: center;
+                
+        }
+        
+        h3 {
+            text-decoration: underline;
+            font-size: 2.8em;
+        }
+        ul {
+            margin: 20px;
+
+            li {
+                padding: 5px;
+                list-style: none;
+                letter-spacing: 0.5px;
+                font-size: 1.1em;
+                font-family: $fontContent;
+
+                
+                input {
+                    margin-right: 10px;
+                    &:hover {
+                    cursor: pointer;
+                    }
+                }
+                
+            }
+        }
+
+    }
+}
+
+
+
+
